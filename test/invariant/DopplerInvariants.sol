@@ -15,11 +15,11 @@ contract DopplerInvariantsTest is BaseTest {
         super.setUp();
         handler = new DopplerHandler(key, hook, router, isToken0, usingEth);
 
-        bytes4[] memory selectors = new bytes4[](3);
+        bytes4[] memory selectors = new bytes4[](4);
         selectors[0] = handler.buyExactAmountIn.selector;
         selectors[1] = handler.buyExactAmountOut.selector;
         selectors[2] = handler.sellExactIn.selector;
-        // selectors[3] = handler.sellExactOut.selector;
+        selectors[3] = handler.sellExactOut.selector;
 
         targetSelector(FuzzSelector({ addr: address(handler), selectors: selectors }));
         targetContract(address(handler));
@@ -40,7 +40,6 @@ contract DopplerInvariantsTest is BaseTest {
 
     /// forge-config: default.invariant.fail-on-revert = true
     function invariant_TracksTotalTokensSoldAndProceeds() public {
-        vm.skip(true);
         (,, uint256 totalTokensSold, uint256 totalProceeds,,) = hook.state();
         assertEq(totalTokensSold, handler.ghost_totalTokensSold());
         assertEq(totalProceeds, handler.ghost_totalProceeds());
@@ -48,7 +47,7 @@ contract DopplerInvariantsTest is BaseTest {
 
     /// forge-config: default.invariant.fail-on-revert = true
     function invariant_CantSellMoreThanNumTokensToSell() public {
-        vm.skip(true);
+        // vm.skip(true);
         uint256 numTokensToSell = hook.getNumTokensToSell();
         assertLe(handler.ghost_totalTokensSold(), numTokensToSell);
     }
