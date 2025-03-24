@@ -8,7 +8,7 @@ import { SafeCallback } from "v4-periphery/src/base/SafeCallback.sol";
 import { Hooks } from "@v4-core/libraries/Hooks.sol";
 import { BaseTest } from "test/shared/BaseTest.sol";
 
-contract AfterSwapTest is BaseTest {
+contract DopplerAfterSwapTest is BaseTest {
     // =========================================================================
     //                          afterSwap Unit Tests
     // =========================================================================

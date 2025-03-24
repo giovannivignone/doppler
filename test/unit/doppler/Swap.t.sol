@@ -14,7 +14,7 @@ import {
     MAX_SWAP_FEE
 } from "src/Doppler.sol";
 
-contract SwapTest is BaseTest {
+contract DopplerSwapTest is BaseTest {
     using StateLibrary for IPoolManager;
     using ProtocolFeeLibrary for *;
     // NOTE: when testing conditions where we expect a revert using buy/sellExpectRevert,

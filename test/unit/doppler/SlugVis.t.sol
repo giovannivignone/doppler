@@ -6,7 +6,7 @@ import { PoolKey } from "@v4-core/types/PoolKey.sol";
 import { BaseTest } from "test/shared/BaseTest.sol";
 import { SlugVis } from "test/shared/SlugVis.sol";
 
-contract SlugVisTest is BaseTest {
+contract DopplerSlugVisTest is BaseTest {
     using PoolIdLibrary for PoolKey;
 
     function setUp() public override {

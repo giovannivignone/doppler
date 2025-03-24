@@ -6,7 +6,7 @@ import { StateLibrary, IPoolManager, PoolId } from "@v4-core/libraries/StateLibr
 import { SenderNotInitializer, CannotMigrate } from "src/Doppler.sol";
 import { BaseTest } from "test/shared/BaseTest.sol";
 
-contract MigrateTest is BaseTest {
+contract DopplerMigrateTest is BaseTest {
     using StateLibrary for IPoolManager;
 
     function test_migrate_RevertsIfSenderNotInitializer() public {

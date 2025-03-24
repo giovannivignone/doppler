@@ -6,7 +6,7 @@ import { Hooks } from "@v4-core/libraries/Hooks.sol";
 import { SenderNotPoolManager } from "src/Doppler.sol";
 import { BaseTest } from "test/shared/BaseTest.sol";
 
-contract ReceiveTest is BaseTest {
+contract DopplerReceiveTest is BaseTest {
     function test_receive_RevertsIfSenderNotPoolManager() public {
         vm.expectRevert(SenderNotPoolManager.selector);
         payable(address(hook)).transfer(1 ether);

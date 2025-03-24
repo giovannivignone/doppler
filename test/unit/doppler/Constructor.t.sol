@@ -23,7 +23,7 @@ import {
 
 using PoolIdLibrary for PoolKey;
 
-contract ConstructorTest is BaseTest {
+contract DopplerConstructorTest is BaseTest {
     function setUp() public override {
         manager = new PoolManager(address(this));
         _deployTokens();

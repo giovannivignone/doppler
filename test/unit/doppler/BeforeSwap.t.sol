@@ -7,7 +7,7 @@ import { BaseTest } from "test/shared/BaseTest.sol";
 
 /// @dev forge test -vvv --mc DopplerBeforeSwapTest --via-ir
 /// TODO: I duplicated this from the test file just to test this out for now.
-contract BeforeSwapTest is BaseTest {
+contract DopplerBeforeSwapTest is BaseTest {
     // =========================================================================
     //                         beforeSwap Unit Tests
     // =========================================================================

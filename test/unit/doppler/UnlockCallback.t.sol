@@ -5,7 +5,7 @@ import { SafeCallback } from "@v4-periphery/base/SafeCallback.sol";
 import { BaseTest } from "test/shared/BaseTest.sol";
 import { Doppler } from "src/Doppler.sol";
 
-contract UnlockCallbackTest is BaseTest {
+contract DopplerUnlockCallbackTest is BaseTest {
     function test_unlockCallback_RevertsWhenNotPoolManager() public {
         vm.expectRevert(SafeCallback.NotPoolManager.selector);
         hook.unlockCallback("");

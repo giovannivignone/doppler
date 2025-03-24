@@ -9,7 +9,7 @@ import { Hooks } from "@v4-core/libraries/Hooks.sol";
 import { CannotAddLiquidity } from "src/Doppler.sol";
 import { BaseTest } from "test/shared/BaseTest.sol";
 
-contract BeforeAddLiquidityTest is BaseTest {
+contract DopplerBeforeAddLiquidityTest is BaseTest {
     // =========================================================================
     //                      beforeAddLiquidity Unit Tests
     // =========================================================================

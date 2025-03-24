@@ -18,7 +18,7 @@ import { BaseTest } from "test/shared/BaseTest.sol";
 
 using PoolIdLibrary for PoolKey;
 
-contract EarlyExitTest is BaseTest {
+contract DopplerEarlyExitTest is BaseTest {
     function deployDoppler(
         DopplerConfig memory config
     ) internal {
